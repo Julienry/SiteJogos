@@ -1,92 +1,162 @@
 <!doctype html>
 <html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="widht=device-width, initial-scale=1.0">
-<link rel="icon" type="imagem/png" href="favicon.png" />
-<title>Jogos - Julienry</title>
-	<style>
-		h1{
-			font-size: 60px;
-			font-family: Verdana;
-			color: #e04912;
-			
-		}
-		img{
-			border-radius: 80px;
-			cursor:pointer;
-		}
-	
-		p{
-			font-size: 42px;
-			font-family: Verdana;
-			color: #e04912;
-		}
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="widht=device-width, initial-scale=1.0">
+	<link rel="icon" type="imagem/png" href="favicon.png" />
+	<title>Jogos - Julienry</title>
+		<style>
+			h1{
+				font-size: 60px;
+				font-family: Verdana;
+				color: #e04912;
 				
-		a{
-			text-decoration: none;
-			font-size: 14px;
-			font-family: Verdana;
-			color: #e04912;
-		}
-		}
-	</style>
-	
-	
-	
-</head>
+			}
+			img{
+				border-radius: 80px;
+				cursor:pointer;
+			}
+			p{
+				font-size: 42px;
+				font-family: Verdana;
+				color: #e04912;
+			}
+			a{
+				text-decoration: none;
+				font-size: 14px;
+				font-family: Verdana;
+				color: #e04912;
+			}
+			.popup{
+				position: fixed;
+				top: 0; bottom: 0;
+				left: 0; right: 0;
+				margin: auto;
+				width: 400px;
+				height: 140px;
+				padding: 15px;
+				border: solid 1px #4c4d4f;
+				background: #c4f2f5;
+				display: none;
+				
+			}
+			
+		</style>
+		
+		<script>
+			//Função para abrir o texto sobre Square and Ball
+			function abrirSB(){
+				
+				var ShowPopup = document.getElementById("popup");
+				ShowPopup.style.display = "block";
+				
+				textoJogo.innerHTML="Jogo desenvolvido no programa Construct2 como trabalho final do primeiro semestre do curso de Jogos Digitais, feito por Julienry.";
+			}
+			//Função para abrir o texto sobre A Queda de Azur
+			function abrirAzur(){
+				
+				var ShowPopup = document.getElementById("popup");
+				ShowPopup.style.display = "block";
+				
+				textoJogo.innerHTML="Jogo programado totalmente em Python como trabalho final do segundo semestre do curso de Jogos Digitais, feito por Janaina Araujo, Julienry Andrade, Janaina Araujo, Kerwin Rocha e Vitor Hugo.";
+			}
+			//Função para abrir o texto sobre Square and Ball 2
+			function abrirSB2(){
+				
+				var ShowPopup = document.getElementById("popup");
+				ShowPopup.style.display = "block";
+				
+				textoJogo.innerHTML="Jogo programado totalmente em Java como trabalho final do terceiro semestre do curso de Jogos Digitais, feito por Julienry.";
+			}
+			//Função para abrir o texto sobre SkyWheels
+			function abrirSky(){
+				
+				var ShowPopup = document.getElementById("popup");
+				ShowPopup.style.display = "block";
+				
+				textoJogo.innerHTML="Jogo desenvolvido na engine Unity como TCC do curso de Jogos Digitais, feito por Julienry Andrade, Kaique Alves e Stefan Vargas.";
+			}
+			
+			function fechar(){
+				
+				document.getElementById("popup").style.display = "none";
+			}
+		</script>
+	</head>
 
-<body background="fundo.jpg">
-	<h1 align="center">Jogos produzidos por Julienry</h1>
-	<br>
-	
-	<p align="center">Square and Ball</p>
-	
-	<table border="0" align="center">
-	
-		<div align="center">
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/jGbhiG3vUHs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<body background="fundo.jpg">
+		<!-- fundo dos popups -->
+		<div id="popup" class="popup" align="center">
+			<a style="color: #912b0f;" id="textoJogo" ></a><br><br><br><br>
+			<a style="color: #00000f;" href="javascript: fechar();">Fechar</a>
 		</div>
-	</table>
-	<p align="center" style="font-size:18px;"><sub>Produzido no programa Construct 2.</sub></p>
-	
-	<br>
-	
-	<p align="center">A Queda de Azur</p>
-	
-	<table border="0" align="center">
-	
+		
+		<!-- Mostrar título -->
+		<h1 align="center">Jogos produzidos por Julienry</h1><br>
+		
+		<!-- Mostrar jogos -->
+		
+		<p align="center">Square and Ball</p>
+		
+		<table border="0" align="center">
+		
+			<div align="center">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/jGbhiG3vUHs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+		</table>
+		
+		<!-- Popup SquareBall -->
 		<div align="center">
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/7sPuuUnbP3E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-		</div>
-	</table>
-	<p align="center" style="font-size:18px;"><sub>Programado em Python.</sub></p>
-	
-	<br>
-	
-	<p align="center">Square and Ball 2</p>
-	
-	<table border="0" align="center">
-	
+			<a href="javascript: abrirSB();">Saber mais</a>
+		
+		</div><br>
+		
+		<p align="center">A Queda de Azur</p>
+		
+		<table border="0" align="center">
+		
+			<div align="center">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/7sPuuUnbP3E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+		</table>
+		
+		<!-- Popup Azur -->
 		<div align="center">
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/YqwkNY-UhcA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-		</div>
-	</table>
-	<p align="center" style="font-size:18px;"><sub>Programado em Java.</sub></p>
-	
-	<br>
-	
-	<p align="center">SkyWheels</p>
-	
-	<table border="0" align="center">
-	
+			<a href="javascript: abrirAzur();">Saber mais</a>
+		
+		</div><br>
+		
+		
+		<p align="center">Square and Ball 2</p>
+		
+		<table border="0" align="center">
+		
+			<div align="center">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/YqwkNY-UhcA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+		</table>
+		
+		<!-- Popup SquareBall 2 -->
 		<div align="center">
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/OmC0ZaIWHqg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-		</div>
-	</table>
-	<p align="center" style="font-size:18px;"><sub>Produzido no programa Unity.</sub></p>
-	
-	<br>
-	<br>
+			<a href="javascript: abrirSB2();">Saber mais</a>
+		
+		</div><br>
+		
+		
+		<p align="center">SkyWheels</p>
+		
+		<table border="0" align="center">
+		
+			<div align="center">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/OmC0ZaIWHqg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+		</table>
+		
+		<!-- Popup SkyWheels -->
+		<div align="center">
+			<a href="javascript: abrirSky();">Saber mais</a>
+		
+		</div><br>
+		
 	</body>
 </html>
